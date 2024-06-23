@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    <h1>Le jeu du petit bac</h1>
+    <h1 class="title">Le jeu du petit bac</h1>
+
+    <p>La lettre choisie est : <span id="chosen-letter"></span> </p>
+
+
 
     <div class="input-container">
 
@@ -17,7 +21,7 @@
 
             <div class="input-group">
                 <label for="country">Pays</label>
-                <input type="text" name="country" id="country">
+                <input type="text" pattern="^[a-z]" name="country" id="country">
             </div>
 
             <div class="input-group">
@@ -41,6 +45,7 @@
                 <input type="text" name="drink" id="drink">
             </div>
         </div>
+
         <div class="row2">
 
             <div class="input-group">
@@ -71,14 +76,39 @@
                 <input type="text" name="color" id="color">
             </div>
 
+        </div>
+
+        <div class="row3">
+
             <div class="input-group">
 
                 <label for="object">Objet</label>
                 <input type="text" name="object" id="object">
             </div>
+
+            <div class="input-group">
+
+                <label for="brand">Marque</label>
+                <input type="text" name="brand" id="brand">
+            </div>
+            <div class="input-group">
+
+                <label for="sport">Sport</label>
+                <input type="text" name="sport" id="sport">
+            </div>
+
+            <div class="input-group">
+
+                <label for="hobby">Loisir</label>
+                <input type="text" name="hobby" id="hobby">
+            </div>
+
         </div>
 
     </div>
+
+
+
 
     <div class="action-btn">
 

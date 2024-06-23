@@ -1,6 +1,9 @@
 var timerInterval;
 
 document.getElementById('start').addEventListener('click', function () {
+    const letter = generateRandomLetter();
+    // Met à jour le contenu de #chosen-letter avec la lettre générée
+    document.getElementById('chosen-letter').textContent = letter;
     this.disabled = true; // Désactiver le bouton "Start"
     var duration = 5 * 60; // 5 minutes en secondes
     var display = document.getElementById('timer');
@@ -50,7 +53,7 @@ function startTimer(duration, display) {
             updateProgressBar(0, duration); // Assurez-vous que la barre est à 0% quand le timer est terminé
         }
     }
-    
+
     // Mettre à jour le chronomètre chaque seconde
     timer();
     timerInterval = setInterval(timer, 1000);
@@ -61,3 +64,10 @@ function updateProgressBar(timeLeft, totalTime) {
     const percentage = (timeLeft / totalTime) * 100;
     progressBar.style.width = percentage + '%';
 }
+
+function generateRandomLetter() {
+    const alphabet = 'abcdefghijklmnopqrstuv';
+    const randomIndex = Math.floor(Math.random() * alphabet.length);
+    return alphabet[randomIndex];
+}
+

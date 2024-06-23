@@ -1,3 +1,8 @@
+body {
+    font-family: 'Arial', sans-serif;
+
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
@@ -15,7 +20,7 @@ label {
 
 
 .input-container input[type="text"] {
-    width: 15%;
+    width: 100%;
     padding: 5px;
     font-size: 1em;
     border: 1px solid #ccc;
@@ -23,7 +28,6 @@ label {
 }
 
 .action-btn button {
-    font-family: 'Arial', sans-serif;
     font-size: 2em;
     color: #ffffff;
     margin: 20px auto;
@@ -41,6 +45,7 @@ button#stop:hover,
 button#reset:hover {
     background: black;
 }
+
 button#start:disabled,
 button#stop:disabled {
     background: #ccc;
@@ -73,4 +78,21 @@ button#stop:disabled {
     /* Commence à 100% et sera mis à jour par JS */
     height: 20px;
     background-color: #4CAF50;
+}
+
+.row1,
+.row2,
+.row3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+#chosen-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.title {
+text-align: center;
 }
