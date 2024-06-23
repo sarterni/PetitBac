@@ -1,0 +1,18 @@
+Exemple d'input que je pourrais rajouter :
+
+<div class="input-group">
+    <label for="food">Nourriture</label>
+    <input type="text" name="food" id="food">
+    <div class="input-group">
+                <label for="woman-name">Nom de femme</label>
+                <input type="text" name="woman-name" id="woman-name">
+            </div>
+            
+            
+    
+            <div class="input-group">
+                <label for="capital-city">Capitale</label>
+                <input type="text" name="capital-city" id="capital-city">
+            </div>
+            
+</div>
