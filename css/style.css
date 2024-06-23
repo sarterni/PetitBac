@@ -21,6 +21,7 @@ label {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .action-btn button {
     font-family: 'Arial', sans-serif;
     font-size: 2em;
@@ -35,9 +36,14 @@ label {
 }
 
 
-.action-btn button:hover {
-    cursor: pointer;
-    background-color: black;
+button#start:hover,
+button#stop:hover {
+    background: black;
+}
+button#start:disabled,
+button#stop:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 #start {
@@ -50,6 +56,7 @@ label {
     border: none;
 }
 
+
 .progress-container {
     width: 100%;
     background-color: #eee;
@@ -57,7 +64,8 @@ label {
 }
 
 .progress-bar {
-    width: 100%; /* Commence à 100% et sera mis à jour par JS */
+    width: 100%;
+    /* Commence à 100% et sera mis à jour par JS */
     height: 20px;
     background-color: #4CAF50;
 }
