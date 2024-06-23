@@ -21,8 +21,7 @@ label {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-div.action-btn button {
+.action-btn button {
     font-family: 'Arial', sans-serif;
     font-size: 2em;
     color: #ffffff;
@@ -36,16 +35,20 @@ div.action-btn button {
 }
 
 
+.action-btn button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
 #start {
     background-color: #4CAF50;
-    border: 2px solid #2db300;
+    border: none;
 }
 
 #stop {
     background-color: #ff0000;
-    border: 2px solid #b30000;
+    border: none;
 }
-
 
 .progress-container {
     width: 100%;
