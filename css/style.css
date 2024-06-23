@@ -46,3 +46,15 @@ div.action-btn button {
     border: 2px solid #b30000;
 }
 
+
+.progress-container {
+    width: 100%;
+    background-color: #eee;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 100%; /* Commence à 100% et sera mis à jour par JS */
+    height: 20px;
+    background-color: #4CAF50;
+}
