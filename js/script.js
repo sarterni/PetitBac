@@ -13,6 +13,13 @@ document.getElementById('stop').addEventListener('click', function () {
     updateProgressBar(0, 1); // Reset la barre de progression
 });
 
+document.getElementById('reset').addEventListener('click', function () {
+    clearInterval(timerInterval);
+    document.getElementById('timer').textContent = "05:00";
+    document.getElementById('start').disabled = false; // Réactiver le bouton "Start"
+    updateProgressBar(1, 1); // Reset la barre de progression
+});
+
 function startTimer(duration, display) {
     var start = Date.now(),
         diff,

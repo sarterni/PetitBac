@@ -37,7 +37,8 @@ label {
 
 
 button#start:hover,
-button#stop:hover {
+button#stop:hover,
+button#reset:hover {
     background: black;
 }
 button#start:disabled,
@@ -56,6 +57,10 @@ button#stop:disabled {
     border: none;
 }
 
+#reset {
+    background-color: #f44336;
+    border: none;
+}
 
 .progress-container {
     width: 100%;
