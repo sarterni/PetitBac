@@ -94,9 +94,18 @@ button#stop:disabled {
 }
 
 .title {
-text-align: center;
+    text-align: center;
 }
 
 span.bold {
     font-weight: bold;
+}
+
+div#submit-div {
+    margin-top: 30px;
+}
+
+button#submit-btn {
+    background-color: blue;
+    border: none;
 }
