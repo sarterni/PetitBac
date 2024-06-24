@@ -66,7 +66,7 @@ function updateProgressBar(timeLeft, totalTime) {
 }
 
 function generateRandomLetter() {
-    const alphabet = 'abcdefghijklmnopqrstuv';
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUV';
     const randomIndex = Math.floor(Math.random() * alphabet.length);
     return alphabet[randomIndex];
 }
