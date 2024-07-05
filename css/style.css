@@ -42,7 +42,8 @@ label {
 
 button#start:hover,
 button#stop:hover,
-button#reset:hover {
+button#reset:hover,
+button#submit-btn:hover {
     background: black;
 }
 
