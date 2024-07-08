@@ -15,7 +15,7 @@
 
     <p>La lettre choisie est : <span id="chosen-letter"></span> </p>
 
-    <form action="" onsubmit="checkWord(event)">
+    <form action="" onsubmit="checkCountry(event); checkCity(event)"></form>
 
 
         <div class="input-container">
@@ -29,7 +29,7 @@
 
                 <div class="input-group">
                     <label for="city">Ville</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="city" id="city">
+                    <input type="text" pattern="^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$" name="city" id="city">
                 </div>
 
                 <div class="input-group">
@@ -110,9 +110,23 @@
 
         </div>
         <div id="submit-div" class="action-btn">
-            <button id="submit-btn" type="submit" onclick="checkWord()">Envoyer</button>
+            <button id="submit-btn" type="submit" onclick="checkCountry(); checkCity()">Envoyer</button>
         </div>
-        <p id="result"></p>
+        <p id="result-councry"></p>
+        <p id="result-city"></p>
+        <p id="result-name"></p>
+        <p id="result-job"></p>
+        <p id="result-drink"></p>
+        <p id="result-transport"></p>
+        <p id="result-animal"></p>
+        <p id="result-vegetable"></p>
+        <p id="result-fruit"></p>
+        <p id="result-color"></p>
+        <p id="result-object"></p>
+        <p id="result-brand"></p>
+        <p id="result-sport"></p>
+        <p id="result-hobby"></p>
+
     </form>
 
     <div class="action-btn">
