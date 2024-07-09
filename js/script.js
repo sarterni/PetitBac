@@ -1,3 +1,20 @@
+function resetForm() {
+    document.getElementById("myForm").reset();
+}
+
+function resetInputBackground() {
+    const inputs = document.querySelectorAll('input[type="text"]');
+    inputs.forEach(input => {
+        input.style.backgroundColor = '';
+        input.style.color = '';
+    });
+}
+
+function clearResultDiv() {
+    const resultDiv = document.querySelector('.result-div');
+    resultDiv.innerHTML = '';
+}
+
 var timerInterval;
 
 document.getElementById('start').addEventListener('click', function () {
@@ -17,6 +34,9 @@ document.getElementById('stop').addEventListener('click', function () {
 });
 
 document.getElementById('reset').addEventListener('click', function () {
+    resetForm();
+    resetInputBackground();
+    clearResultDiv();
     clearInterval(timerInterval);
     document.getElementById('timer').textContent = "05:00";
     document.getElementById('start').disabled = false; // Réactiver le bouton "Start"
@@ -88,6 +108,12 @@ const drinkList = ['eau', 'café', 'thé', 'jus', 'soda', 'bière', 'vin', 'whis
 
 document.getElementById('submit-btn').addEventListener('click', checkWord);
 
+function checkWord(event) {
+    checkCountry(event);
+    checkCity(event);
+    checkJob(event);
+    checkDrink(event);
+}
 function checkCountry(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     // Get user input
@@ -99,22 +125,32 @@ function checkCountry(event) {
         document.getElementById('country').style.backgroundColor = 'red';
         document.getElementById('result-country').innerText = `MAJUSCULE obligatoire pour la Première lettre de Pays Capitale`;
     }
+    // Check if the word exists in the country list
+    if (countryList.includes(userInput)) {
+        document.getElementById('result-country').innerText = `The word '${userInput}' exists in the country list.`;
+        document.getElementById('country').style.backgroundColor = 'green';
+        document.getElementById('country').style.color = 'white';
+    } else {
+        document.getElementById('result-country').innerText = `The word '${userInput}' does not exist in the country list.`;
+
+        document.getElementById('country').style.backgroundColor = 'red';
+        document.getElementById('country').style.color = 'white';
+    }
 }
-// Check if the word exists in the country list
-if (countryList.includes(userInput)) {
-    document.getElementById('result-country').innerText = `The word '${userInput}' exists in the country list.`;
-    document.getElementById('country').style.backgroundColor = 'green';
-    document.getElementById('country').style.color = 'white';
-} else {
-    document.getElementById('result-country').innerText = `The word '${userInput}' does not exist in the country list.`;
-}
+
+
 
 
 function checkCity(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     // Get user input
     const userInput = document.getElementById('city').value;
+    const pattern = /^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$/;
 
+    if (!pattern.test(userInput)) {
+        document.getElementById('city').style.backgroundColor = 'red';
+        document.getElementById('result-city').innerText = `MAJUSCULE obligatoire pour la Première lettre de Ville`;
+    }
     // Check if the word exists in the city list
     if (cityList.includes(userInput)) {
         document.getElementById('result-city').innerText = `The word '${userInput}' exists in the city list.`;
@@ -122,15 +158,21 @@ function checkCity(event) {
         document.getElementById('city').style.color = 'white';
     } else {
         document.getElementById('result-city').innerText = `The word '${userInput}' does not exist in the city list.`;
+        document.getElementById('city').style.backgroundColor = 'red';
+        document.getElementById('city').style.color = 'white';
     }
-
 }
 
 function checkJob(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     // Get user input
     const userInput = document.getElementById('job').value;
+    const pattern = /^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$/;
 
+    if (!pattern.test(userInput)) {
+        document.getElementById('job').style.backgroundColor = 'red';
+        document.getElementById('result-job').innerText = `MAJUSCULE obligatoire pour la Première lettre de Métier`;
+    }
     // Check if the word exists in the job list
     if (jobList.includes(userInput)) {
         document.getElementById('result-job').innerText = `The word '${userInput}' exists in the job list.`;
@@ -138,15 +180,22 @@ function checkJob(event) {
         document.getElementById('job').style.color = 'white';
     } else {
         document.getElementById('result-job').innerText = `The word '${userInput}' does not exist in the job list.`;
+        document.getElementById('job').style.backgroundColor = 'red';
+        document.getElementById('job').style.color = 'white';
     }
-
 }
+
 
 function checkDrink(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     // Get user input
     const userInput = document.getElementById('drink').value;
+    const pattern = /^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$/;
 
+    if (!pattern.test(userInput)) {
+        document.getElementById('drink').style.backgroundColor = 'red';
+        document.getElementById('result-drink').innerText = `MAJUSCULE obligatoire pour la Première lettre de Boisson`;
+    }
     // Check if the word exists in the drink list
     if (drinkList.includes(userInput)) {
         document.getElementById('result-drink').innerText = `The word '${userInput}' exists in the drink list.`;
@@ -154,13 +203,7 @@ function checkDrink(event) {
         document.getElementById('drink').style.color = 'white';
     } else {
         document.getElementById('result-drink').innerText = `The word '${userInput}' does not exist in the drink list.`;
+        document.getElementById('drink').style.backgroundColor = 'red';
+        document.getElementById('drink').style.color = 'white';
     }
-
-}
-
-function checkWord(event) {
-    checkCountry(event);
-    checkCity(event);
-    checkJob(event);
-    checkDrink(event);
 }
