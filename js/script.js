@@ -92,16 +92,23 @@ function checkCountry(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     // Get user input
     const userInput = document.getElementById('country').value;
+    const pattern = /^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$/;
 
-    // Check if the word exists in the country list
-    if (countryList.includes(userInput)) {
-        document.getElementById('result-country').innerText = `The word '${userInput}' exists in the country list.`;
-        document.getElementById('country').style.backgroundColor = 'green';
-        document.getElementById('country').style.color = 'white';
-    } else {
-        document.getElementById('result-country').innerText = `The word '${userInput}' does not exist in the country list.`;
+
+    if (!pattern.test(userInput)) {
+        document.getElementById('country').style.backgroundColor = 'red';
+        document.getElementById('result-country').innerText = `MAJUSCULE obligatoire pour la Première lettre de Pays Capitale`;
     }
 }
+// Check if the word exists in the country list
+if (countryList.includes(userInput)) {
+    document.getElementById('result-country').innerText = `The word '${userInput}' exists in the country list.`;
+    document.getElementById('country').style.backgroundColor = 'green';
+    document.getElementById('country').style.color = 'white';
+} else {
+    document.getElementById('result-country').innerText = `The word '${userInput}' does not exist in the country list.`;
+}
+
 
 function checkCity(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
