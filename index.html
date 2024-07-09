@@ -15,104 +15,106 @@
         Première lettre de <br><br> <span class="bold">Pays Capitale</span></p>
 
     <p>La lettre choisie est : <span id="chosen-letter"></span> </p>
-
     <form action="" onsubmit="checkWord(event)">
+
 
         <div class="input-container">
 
-            <div class="row1">
-
-                <div class="input-group">
-                    <label for="country">Pays</label>
-                    <input type="text" pattern="^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$" name="country"
-                        id="country">
-                </div>
-
-                <div class="input-group">
-                    <label for="city">Capitale</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="city" id="city">
-                </div>
-
-                <div class="input-group">
-                    <label for="name">Prénom</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="name" id="name">
-                </div>
-
-                <div class="input-group">
-                    <label for="job">Métier</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="job" id="job">
-                </div>
-
-
-                <div class="input-group">
-                    <label for="drink">Boisson</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="drink" id="drink">
-                </div>
+            <div class="input-group">
+                <label for="country">Pays</label>
+                <input type="text"
+                    pattern="^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*(\s[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*)*$"
+                    name="country" id="country" placeholder="Majuscule à la première lettre de chaque mot" required>
             </div>
 
-            <div class="row2">
-
-                <div class="input-group">
-                    <label for="transport">Transport</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="transport" id="transport">
-                </div>
 
 
-                <div class="input-group">
-                    <label for="animal">Animal</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="animal" id="animal">
-                </div>
-
-
-                <div class="input-group">
-                    <label for="vegetable">Légume</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="vegetable" id="vegetable">
-                </div>
-                <div class="input-group">
-                    <label for="fruit">Fruit</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="fruit" id="fruit">
-                </div>
-
-
-                <div class="input-group">
-
-                    <label for="color">Couleur</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="color" id="color">
-                </div>
-
+            <div class="input-group">
+                <label for="city">Ville</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="city" id="city">
             </div>
 
-            <div class="row3">
-
-                <div class="input-group">
-
-                    <label for="object">Objet</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="object" id="object">
-                </div>
-
-                <div class="input-group">
-
-                    <label for="brand">Marque</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="brand" id="brand">
-                </div>
-                <div class="input-group">
-
-                    <label for="sport">Sport</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="sport" id="sport">
-                </div>
-
-                <div class="input-group">
-
-                    <label for="hobby">Loisir</label>
-                    <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="hobby" id="hobby">
-                </div>
-
+            <div class="input-group">
+                <label for="name">Prénom</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="name" id="name">
             </div>
+
+            <div class="input-group">
+                <label for="job">Métier</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="job" id="job">
+            </div>
+
+
+            <div class="input-group">
+                <label for="drink">Boisson</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="drink" id="drink">
+            </div>
+        </div>
+
+        <div class="row2">
+
+            <div class="input-group">
+                <label for="transport">Transport</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="transport" id="transport">
+            </div>
+
+
+            <div class="input-group">
+                <label for="animal">Animal</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="animal" id="animal">
+            </div>
+
+
+            <div class="input-group">
+                <label for="vegetable">Légume</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="vegetable" id="vegetable">
+            </div>
+            <div class="input-group">
+                <label for="fruit">Fruit</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="fruit" id="fruit">
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="color">Couleur</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="color" id="color">
+            </div>
+
+        </div>
+
+        <div class="row3">
+
+            <div class="input-group">
+
+                <label for="object">Objet</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="object" id="object">
+            </div>
+
+            <div class="input-group">
+
+                <label for="brand">Marque</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="brand" id="brand">
+            </div>
+            <div class="input-group">
+
+                <label for="sport">Sport</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="sport" id="sport">
+            </div>
+
+            <div class="input-group">
+
+                <label for="hobby">Loisir</label>
+                <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="hobby" id="hobby">
+            </div>
+
+        </div>
 
         </div>
         <div id="submit-div" class="action-btn">
-            <input type="submit" value="Submit" id="submit-btn" />
+            <button id="submit-btn" type="submit">Envoyer</button>
         </div>
+
 
         <p id="result-country"></p>
         <p id="result-city"></p>
