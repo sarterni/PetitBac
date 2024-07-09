@@ -79,9 +79,14 @@ const countryList = ['Afghanistan', 'Albanie', 'Algérie', 'Andorre', 'Angola', 
 
 
 const cityList = ['Paris', 'Londres', 'Berlin', 'Madrid', 'Rome', 'Lisbonne', 'Bruxelles', 'Amsterdam', 'Oslo', 'Stockholm', 'Copenhague', 'Varsovie', 'Budapest', 'Prague', 'Vienne', 'Athènes', 'Sofia', 'Bucarest', 'Ankara', 'Moscou', 'Kiev', 'Tallinn', 'Riga', 'Vilnius', 'Dublin', 'Bratislava', 'Ljubljana', 'Zagreb', 'Sarajevo', 'Podgorica', 'Tirana', 'Skopje', 'Belgrade', 'Pristina', 'Chisinau'];
+
+const jobList = ['pompier', 'policier', ' développeur', ' designer', ' architecte', ' ingénieur', ' consultant', ' manager', ' analyste', ' administrateur', ' technicien', ' formateur', ' expert', ' spécialiste', ' directeur', ' chef de projet', ' responsable', ' chargé de mission', ' assistant', ' conseiller', ' auditeur', ' chef de produit', ' chef de service', ' chef de département', ' chef de division', ' chef de bureau', ' chef de groupe', ' chef de section', ' chef de cellule', ' chef de chantier'];
+
+const drinkList = ['eau', 'café', 'thé', 'jus', 'soda', 'bière', 'vin', 'whisky', 'vodka', 'rhum', 'gin', 'tequila', 'champagne', 'cognac ', 'liqueur', 'cocktail', 'smoothie', 'lait',];
+
 // Function to check if the word exists in the list
 
-document.getElementById('submit-btn').addEventListener('click', checkCountry);
+document.getElementById('submit-btn').addEventListener('click', checkWord);
 
 function checkCountry(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
@@ -98,17 +103,57 @@ function checkCountry(event) {
     }
 }
 
-// function checkCity(event) {
-//     event.preventDefault(); // Prevent the form from submitting the traditional way
-//     // Get user input
-//     const userInput = document.getElementById('city').value;
+function checkCity(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    // Get user input
+    const userInput = document.getElementById('city').value;
 
-//     // Check if the word exists in the city list
-//     if (cityList.includes(userInput)) {
-//         document.getElementById('result').innerText = `The word '${userInput}' exists in the city list.`;
-//         document.getElementById('city').style.backgroundColor = 'green';
-//         document.getElementById('city').style.color = 'white';
-//     } else {
-//         document.getElementById('result-city').innerText = `The word '${userInput}' does not exist in the city list.`;
-//     }
-// }
+    // Check if the word exists in the city list
+    if (cityList.includes(userInput)) {
+        document.getElementById('result-city').innerText = `The word '${userInput}' exists in the city list.`;
+        document.getElementById('city').style.backgroundColor = 'green';
+        document.getElementById('city').style.color = 'white';
+    } else {
+        document.getElementById('result-city').innerText = `The word '${userInput}' does not exist in the city list.`;
+    }
+
+}
+
+function checkJob(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    // Get user input
+    const userInput = document.getElementById('job').value;
+
+    // Check if the word exists in the job list
+    if (jobList.includes(userInput)) {
+        document.getElementById('result-job').innerText = `The word '${userInput}' exists in the job list.`;
+        document.getElementById('job').style.backgroundColor = 'green';
+        document.getElementById('job').style.color = 'white';
+    } else {
+        document.getElementById('result-job').innerText = `The word '${userInput}' does not exist in the job list.`;
+    }
+
+}
+
+function checkDrink(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    // Get user input
+    const userInput = document.getElementById('drink').value;
+
+    // Check if the word exists in the drink list
+    if (drinkList.includes(userInput)) {
+        document.getElementById('result-drink').innerText = `The word '${userInput}' exists in the drink list.`;
+        document.getElementById('drink').style.backgroundColor = 'green';
+        document.getElementById('drink').style.color = 'white';
+    } else {
+        document.getElementById('result-drink').innerText = `The word '${userInput}' does not exist in the drink list.`;
+    }
+
+}
+
+function checkWord(event) {
+    checkCountry(event);
+    checkCity(event);
+    checkJob(event);
+    checkDrink(event);
+}

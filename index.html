@@ -11,12 +11,12 @@
 <body>
     <h1 class="title">Le jeu du petit bac</h1>
     <p>Anfin de simplifier la vérification lors du remplissage seuls les <span class="bold">minucules et accents</span>
-        sont autorisés dans les inputs</p>
+        sont autorisés dans les inputs. <br><br> Cependant <span class="bold">MAJUSCULE obligatoire</span> pour la
+        Première lettre de <br><br> <span class="bold">Pays Capitale</span></p>
 
     <p>La lettre choisie est : <span id="chosen-letter"></span> </p>
 
-    <form method="post" action="" onsubmit="checkCountry(event)">
-
+    <form action="" onsubmit="checkWord(event)">
 
         <div class="input-container">
 
@@ -24,12 +24,12 @@
 
                 <div class="input-group">
                     <label for="country">Pays</label>
-                    <input type="text" pattern="^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$" name="country" id="country"
-                        placeholder="majuscule à la première lettre">
+                    <input type="text" pattern="^[A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ][a-zàâäéèêëïîôöùûüç]*$" name="country"
+                        id="country">
                 </div>
 
                 <div class="input-group">
-                    <label for="city">Ville</label>
+                    <label for="city">Capitale</label>
                     <input type="text" pattern="^[a-zàâäéèêëïîôöùûüç]+$" name="city" id="city">
                 </div>
 
@@ -111,7 +111,7 @@
 
         </div>
         <div id="submit-div" class="action-btn">
-            <button id="submit-btn" type="submit" value="Submit">Envoyer</button>
+            <input type="submit" value="Submit" id="submit-btn" />
         </div>
 
         <p id="result-country"></p>

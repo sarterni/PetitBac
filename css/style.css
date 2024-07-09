@@ -43,7 +43,7 @@ label {
 button#start:hover,
 button#stop:hover,
 button#reset:hover,
-button#submit-btn:hover {
+#submit-btn:hover {
     background: black;
 }
 
@@ -106,7 +106,7 @@ div#submit-div {
     margin-top: 30px;
 }
 
-button#submit-btn {
+#submit-btn {
     background-color: blue;
     border: none;
 }
