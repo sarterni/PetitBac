@@ -47,8 +47,10 @@ button#reset:hover,
     background: black;
 }
 
+button#submit-btn:disabled,
 button#start:disabled,
-button#stop:disabled {
+button#stop:disabled,
+button#reset:disabled {
     background: #ccc;
     cursor: not-allowed;
 }
