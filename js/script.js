@@ -15,13 +15,27 @@ function clearResultDiv() {
     resultDiv.innerHTML = '';
 }
 
+function statusBtn() {
+    document.getElementById('start').disabled = true;
+    document.getElementById('stop').disabled = false;
+    document.getElementById('reset').disabled = false;
+    document.getElementById('submit-btn').disabled = false;
+}
+
+function resetStatusBtn() {
+    document.getElementById('start').disabled = false;
+    document.getElementById('stop').disabled = true;
+    document.getElementById('reset').disabled = true;
+    document.getElementById('submit-btn').disabled = true;
+}
+
 var timerInterval;
 
 document.getElementById('start').addEventListener('click', function () {
+    statusBtn();
     const letter = generateRandomLetter();
     // Met à jour le contenu de #chosen-letter avec la lettre générée
     document.getElementById('chosen-letter').textContent = letter;
-    this.disabled = true; // Désactiver le bouton "Start"
     var duration = 5 * 60; // 5 minutes en secondes
     var display = document.getElementById('timer');
     startTimer(duration, display);
@@ -34,6 +48,7 @@ document.getElementById('stop').addEventListener('click', function () {
 });
 
 document.getElementById('reset').addEventListener('click', function () {
+    resetStatusBtn();
     resetForm();
     resetInputBackground();
     clearResultDiv();
