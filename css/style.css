@@ -41,15 +41,17 @@ label {
 
 
 button#start:hover,
-button#stop:hover,
-button#reset:hover,
-#submit-btn:hover {
+button#pause:hover,
+button#resume:hover,
+button#submit-btn:hover,
+button#reset:hover {
     background: black;
 }
 
-button#submit-btn:disabled,
 button#start:disabled,
-button#stop:disabled,
+button#pause:disabled,
+button#resume:disabled,
+button#submit-btn:disabled,
 button#reset:disabled {
     background: #ccc;
     cursor: not-allowed;
@@ -60,13 +62,22 @@ button#reset:disabled {
     border: none;
 }
 
-#stop {
+#pause {
     background-color: #ff0000;
+    border: none;
+}
+
+#resume {
+    background-color: #008CBA;
     border: none;
 }
 
 #reset {
     background-color: #f44336;
+    border: none;
+}
+#submit-btn {
+    background-color: blue;
     border: none;
 }
 
@@ -106,9 +117,4 @@ span.bold {
 
 div#submit-div {
     margin-top: 30px;
-}
-
-#submit-btn {
-    background-color: blue;
-    border: none;
 }

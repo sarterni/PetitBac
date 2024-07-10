@@ -15,10 +15,11 @@ function resetForm() {
 }
 
 function statusBtn() {
-    document.getElementById('start').disabled = true;
-    document.getElementById('stop').disabled = false;
-    document.getElementById('reset').disabled = false;
     document.getElementById('submit-btn').disabled = false;
+    document.getElementById('start').disabled = true;
+    document.getElementById('pause').disabled = false;
+    document.getElementById('resume').disabled = false;
+    document.getElementById('reset').disabled = false;
 }
 
 
@@ -35,10 +36,16 @@ document.getElementById('start').addEventListener('click', function () {
     startTimer(duration, display);
 });
 
-document.getElementById('stop').addEventListener('click', function () {
+
+document.getElementById('pause').addEventListener('click', function () {
     clearInterval(timerInterval);
-    document.getElementById('timer').textContent = "00:00";
-    updateProgressBar(0, 1); // Reset la barre de progression
+});
+
+document.getElementById('resume').addEventListener('click', function () {
+    var duration = parseInt(document.getElementById('timer').textContent.split(':')[0]) * 60 + parseInt(document.getElementById('timer').textContent.split(':')[1]);
+    var display = document.getElementById('timer');
+    startTimer(duration, display);
+
 });
 
 document.getElementById('reset').addEventListener('click', function () {

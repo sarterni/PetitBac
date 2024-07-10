@@ -138,8 +138,10 @@
     <div class="action-btn">
 
         <button id="start">Commencer</button>
+    
+        <button id="pause" disabled>Pause</button>
 
-        <button id="stop" disabled>Stop</button>
+        <button id="resume" disabled>Reprendre</button>
 
         <button id="reset" disabled>Réinitialiser</button>
 
