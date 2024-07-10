@@ -1,18 +1,17 @@
-function resetForm() {
-    document.getElementById("myForm").reset();
+function refreshPage() {
+    location.reload();
 }
 
-function resetInputBackground() {
+function resetForm() {
+    document.getElementById("myForm").reset();
     const inputs = document.querySelectorAll('input[type="text"]');
     inputs.forEach(input => {
         input.style.backgroundColor = '';
         input.style.color = '';
-    });
-}
-
-function clearResultDiv() {
-    const resultDiv = document.querySelector('.result-div');
-    resultDiv.innerHTML = '';
+    }); {
+        const resultDiv = document.querySelector('.result-div');
+        resultDiv.innerHTML = '';
+    }
 }
 
 function statusBtn() {
@@ -22,12 +21,7 @@ function statusBtn() {
     document.getElementById('submit-btn').disabled = false;
 }
 
-function resetStatusBtn() {
-    document.getElementById('start').disabled = false;
-    document.getElementById('stop').disabled = true;
-    document.getElementById('reset').disabled = true;
-    document.getElementById('submit-btn').disabled = true;
-}
+
 
 var timerInterval;
 
@@ -48,14 +42,11 @@ document.getElementById('stop').addEventListener('click', function () {
 });
 
 document.getElementById('reset').addEventListener('click', function () {
-    resetStatusBtn();
     resetForm();
-    resetInputBackground();
-    clearResultDiv();
     clearInterval(timerInterval);
-    document.getElementById('timer').textContent = "05:00";
-    document.getElementById('start').disabled = false; // Réactiver le bouton "Start"
-    updateProgressBar(1, 1); // Reset la barre de progression
+    document.getElementById('timer').textContent = "00:00";
+    updateProgressBar(0, 1); // Reset la barre de progression
+    refreshPage();
 });
 
 function startTimer(duration, display) {
