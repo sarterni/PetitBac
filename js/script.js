@@ -1,6 +1,6 @@
-document.getElementById('addWord').addEventListener('click', function() {
+document.getElementById('addWord').addEventListener('click', function () {
     var subject = 'Demande Ajout Mot Petit Bac';
-    var body = 'Bonjour,\n\nJ\'aimerais ajouter les mots suivants :\n\nPays : \nVille : \nMétier : \nBoisson : ';
+    var body = 'Bonjour,\n Merci de contribuer à l\'amélioration de ce jeu. \nVeuillez ajouter les mots ci-dessus dans les listes correspondantes.\n\n\ J\'aimerais ajouter les mots suivants :\n\nPays : \nCapitale : \nPrénom :  \nMétier : \nBoisson :\n\nVotre Pseudo:\n\n';
     window.location.href = 'mailto:contact@nicodigitalsstudio.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 });
 
