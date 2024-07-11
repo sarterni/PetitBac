@@ -1,3 +1,11 @@
+document.getElementById('addWord').addEventListener('click', function() {
+    var subject = 'Demande Ajout Mot Petit Bac';
+    var body = 'Bonjour,\n\nJ\'aimerais ajouter les mots suivants :\n\nPays : \nVille : \nMétier : \nBoisson : ';
+    window.location.href = 'mailto:contact@nicodigitalsstudio.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+});
+
+
+
 function refreshPage() {
     location.reload();
 }

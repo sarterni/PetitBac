@@ -23,63 +23,63 @@
             <div class="row1">
                 <div class="input-group">
                     <label for="country">Pays</label>
-                    <input type="text" name="country" id="country" disabled>
+                    <input type="text" name="country" id="country" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="city">Capitale</label>
-                    <input type="text" name="city" id="city" disabled>
+                    <input type="text" name="city" id="city" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="name">Prénom</label>
-                    <input type="text" name="name" id="name" disabled>
+                    <input type="text" name="name" id="name" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="job">Métier</label>
-                    <input type="text" name="job" id="job" disabled>
+                    <input type="text" name="job" id="job" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="drink">Boisson</label>
-                    <input type="text" name="drink" id="drink" disabled>
+                    <input type="text" name="drink" id="drink" autocomplete="off" disabled>
                 </div>
             </div>
             <div class="row2">
                 <div class="input-group">
                     <label for="transport">Transport</label>
-                    <input type="text" name="transport" id="transport" disabled>
+                    <input type="text" name="transport" id="transport" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="animal">Animal</label>
-                    <input type="text" name="animal" id="animal" disabled>
+                    <input type="text" name="animal" id="animal" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="vegetable">Légume</label>
-                    <input type="text" name="vegetable" id="vegetable" disabled>
+                    <input type="text" name="vegetable" id="vegetable" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="fruit">Fruit</label>
-                    <input type="text" name="fruit" id="fruit" disabled>
+                    <input type="text" name="fruit" id="fruit" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="color">Couleur</label>
-                    <input type="text" name="color" id="color" disabled>
+                    <input type="text" name="color" id="color" autocomplete="off" disabled>
                 </div>
             </div>
             <div class="row3">
                 <div class="input-group">
                     <label for="object">Objet</label>
-                    <input type="text" name="object" id="object" disabled>
+                    <input type="text" name="object" id="object" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="brand">Marque</label>
-                    <input type="text" name="brand" id="brand" disabled>
+                    <input type="text" name="brand" id="brand" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="sport">Sport</label>
-                    <input type="text" name="sport" id="sport" disabled>
+                    <input type="text" name="sport" id="sport" autocomplete="off" disabled>
                 </div>
                 <div class="input-group">
                     <label for="hobby">Loisir</label>
-                    <input type="text" name="hobby" id="hobby" disabled>
+                    <input type="text" name="hobby" id="hobby" autocomplete="off" disabled>
                 </div>
             </div>
         </div>
@@ -91,9 +91,10 @@
             <button id="submit-btn" disabled type="submit" onclick="checkWord()">Envoyer</button>
         </div>
 
+        
         <div class="result-div">
-
-
+            
+            
             <p id="result-country"></p>
             <p id="result-city"></p>
             <p id="result-name"></p>
@@ -110,15 +111,15 @@
             <p id="result-hobby"></p>
         </div>
     </form>
-
+    
     <div class="action-btn">
-
+        
         <button id="start">Commencer</button>
 
         <button id="pause" disabled>Pause</button>
-
+        
         <button id="resume" disabled>Reprendre</button>
-
+        
         <button id="reset" disabled>Réinitialiser</button>
 
     </div>
@@ -127,9 +128,12 @@
     <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
-
+    
+    <div class="action-btn">
+        <button id="addWord">Ajouter un mot</button>
+    </div>
     <script src="js/script.js?v=<?php echo filemtime('js/script.js'); ?>"></script>
-
+    
 </body>
 
 </html>

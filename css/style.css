@@ -44,10 +44,11 @@ button#start:hover,
 button#pause:hover,
 button#resume:hover,
 button#submit-btn:hover,
-button#reset:hover {
+button#reset:hover,
+button#addWord:hover {
     background: black;
     cursor: pointer;
-    
+
 }
 
 button#start:disabled,
@@ -80,6 +81,11 @@ button#reset:disabled {
 }
 #submit-btn {
     background-color: blue;
+    border: none;
+}
+
+#addWord {
+    background-color: #4CAF50;
     border: none;
 }
 
