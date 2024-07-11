@@ -46,6 +46,8 @@ button#resume:hover,
 button#submit-btn:hover,
 button#reset:hover {
     background: black;
+    cursor: pointer;
+    
 }
 
 button#start:disabled,
@@ -117,4 +119,7 @@ span.bold {
 
 div#submit-div {
     margin-top: 30px;
+}
+input[type="text"]:disabled {
+    background-color: #f1f1f1;
 }

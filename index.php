@@ -19,96 +19,72 @@
 
     <form id="myForm" onsubmit="checkWord(event)">
 
-
         <div class="input-container">
-
             <div class="row1">
-
                 <div class="input-group">
                     <label for="country">Pays</label>
-                    <input type="text" name="country" id="country">
+                    <input type="text" name="country" id="country" disabled>
                 </div>
-
                 <div class="input-group">
                     <label for="city">Capitale</label>
-                    <input type="text" name="city" id="city">
+                    <input type="text" name="city" id="city" disabled>
                 </div>
-
                 <div class="input-group">
                     <label for="name">Prénom</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" disabled>
                 </div>
-
                 <div class="input-group">
                     <label for="job">Métier</label>
-                    <input type="text" name="job" id="job">
+                    <input type="text" name="job" id="job" disabled>
                 </div>
-
-
                 <div class="input-group">
                     <label for="drink">Boisson</label>
-                    <input type="text" name="drink" id="drink">
+                    <input type="text" name="drink" id="drink" disabled>
                 </div>
             </div>
-
             <div class="row2">
-
                 <div class="input-group">
                     <label for="transport">Transport</label>
-                    <input type="text" name="transport" id="transport">
+                    <input type="text" name="transport" id="transport" disabled>
                 </div>
-
-
                 <div class="input-group">
                     <label for="animal">Animal</label>
-                    <input type="text" name="animal" id="animal">
+                    <input type="text" name="animal" id="animal" disabled>
                 </div>
-
-
                 <div class="input-group">
                     <label for="vegetable">Légume</label>
-                    <input type="text" name="vegetable" id="vegetable">
+                    <input type="text" name="vegetable" id="vegetable" disabled>
                 </div>
                 <div class="input-group">
                     <label for="fruit">Fruit</label>
-                    <input type="text" name="fruit" id="fruit">
+                    <input type="text" name="fruit" id="fruit" disabled>
                 </div>
-
-
                 <div class="input-group">
-
                     <label for="color">Couleur</label>
-                    <input type="text" name="color" id="color">
+                    <input type="text" name="color" id="color" disabled>
                 </div>
-
             </div>
-
             <div class="row3">
-
                 <div class="input-group">
-
                     <label for="object">Objet</label>
-                    <input type="text" name="object" id="object">
+                    <input type="text" name="object" id="object" disabled>
                 </div>
-
                 <div class="input-group">
-
                     <label for="brand">Marque</label>
-                    <input type="text" name="brand" id="brand">
+                    <input type="text" name="brand" id="brand" disabled>
                 </div>
                 <div class="input-group">
-
                     <label for="sport">Sport</label>
-                    <input type="text" name="sport" id="sport">
+                    <input type="text" name="sport" id="sport" disabled>
                 </div>
-
                 <div class="input-group">
-
                     <label for="hobby">Loisir</label>
-                    <input type="text" name="hobby" id="hobby">
+                    <input type="text" name="hobby" id="hobby" disabled>
                 </div>
-
             </div>
+        </div>
+
+        </div>
 
         </div>
         <div id="submit-div" class="action-btn">
@@ -138,7 +114,7 @@
     <div class="action-btn">
 
         <button id="start">Commencer</button>
-    
+
         <button id="pause" disabled>Pause</button>
 
         <button id="resume" disabled>Reprendre</button>
@@ -152,7 +128,7 @@
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <script src="./js/script.js"></script>
+    <script src="js/script.js?v=<?php echo filemtime('js/script.js'); ?>"></script>
 
 </body>
 

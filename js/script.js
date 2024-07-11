@@ -27,6 +27,11 @@ function statusBtn() {
 var timerInterval;
 
 document.getElementById('start').addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input[type="text"]');
+    inputs.forEach(input => {
+        input.disabled = false;
+    });
+    // Assurez-vous d'appeler statusBtn() ici si nécessaire pour mettre à jour l'état des boutons
     statusBtn();
     const letter = generateRandomLetter();
     // Met à jour le contenu de #chosen-letter avec la lettre générée
@@ -38,10 +43,21 @@ document.getElementById('start').addEventListener('click', function () {
 
 
 document.getElementById('pause').addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input[type="text"]');
+    inputs.forEach(input => {
+        input.disabled = true;
+    }
+    );
+
     clearInterval(timerInterval);
 });
 
 document.getElementById('resume').addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input[type="text"]');
+    inputs.forEach(input => {
+        input.disabled = false;
+    });
+
     var duration = parseInt(document.getElementById('timer').textContent.split(':')[0]) * 60 + parseInt(document.getElementById('timer').textContent.split(':')[1]);
     var display = document.getElementById('timer');
     startTimer(duration, display);
