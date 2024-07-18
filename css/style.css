@@ -79,6 +79,7 @@ button#reset:disabled {
     background-color: #f44336;
     border: none;
 }
+
 #submit-btn {
     background-color: blue;
     border: none;
@@ -110,7 +111,8 @@ button#reset:disabled {
     gap: 100px;
 }
 
-#chosen-letter {
+#chosen-letter,
+#score-span {
     font-size: 2em;
     font-weight: bold;
 }
@@ -126,6 +128,32 @@ span.bold {
 div#submit-div {
     margin-top: 30px;
 }
+
 input[type="text"]:disabled {
     background-color: #f1f1f1;
 }
+
+#score-p {
+    text-align: right;
+}
+
+#score-span {
+    color: #4CAF50;
+}
+
+#chosen-letter {
+    color: #008CBA;
+}
+
+/* responsve */
+
+@media screen and (max-width: 768px) {
+    .row1,
+    .row2,
+    .row3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+

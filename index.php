@@ -10,10 +10,14 @@
 
 <body>
     <h1 class="title">Le jeu du petit bac</h1>
+
     <p>Anfin de simplifier la vérification lors du remplissage seuls les <span class="bold">minucules et accents</span>
         sont autorisés dans les inputs. <br><br> Cependant <span class="bold">MAJUSCULE obligatoire</span> pour la
         Première
         lettre de <br><br> <span class="bold">Pays Capitale</span></p>
+    <div class="score-div">
+        <p id="score-p"> Vous avez un score de<span id="score-span"> 50 </span> pts</p>
+    </div>
 
     <p>La lettre choisie est : <span id="chosen-letter"></span> </p>
 
@@ -91,10 +95,10 @@
             <button id="submit-btn" disabled type="submit" onclick="checkWord()">Envoyer</button>
         </div>
 
-        
+
         <div class="result-div">
-            
-            
+
+
             <p id="result-country"></p>
             <p id="result-city"></p>
             <p id="result-name"></p>
@@ -111,15 +115,15 @@
             <p id="result-hobby"></p>
         </div>
     </form>
-    
+
     <div class="action-btn">
-        
+
         <button id="start">Commencer</button>
 
         <button id="pause" disabled>Pause</button>
-        
+
         <button id="resume" disabled>Reprendre</button>
-        
+
         <button id="reset" disabled>Réinitialiser</button>
 
     </div>
@@ -128,12 +132,12 @@
     <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
-    
+
     <div class="action-btn">
         <button id="addWord">Ajouter un mot</button>
     </div>
     <script src="js/script.js?v=<?php echo filemtime('js/script.js'); ?>"></script>
-    
+
 </body>
 
 </html>
