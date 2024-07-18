@@ -32,6 +32,7 @@ function statusBtn() {
 
 
 
+
 var timerInterval;
 
 document.getElementById('start').addEventListener('click', function () {
