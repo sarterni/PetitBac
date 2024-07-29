@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css?v=<?php echo filemtime('css/style.css'); ?>">
-    <title>Document</title>
+    <link rel="icon" href="favicon.ico">
+    <title>Le jeu du petit bac</title>
 </head>
 
 <body>
@@ -16,7 +17,8 @@
         Première
         lettre de <br><br> <span class="bold">Pays Capitale</span></p>
     <div class="score-div">
-        <p id="score-p"> Vous avez un score de<span id="score-span"> 50 </span> pts</p>
+        <p id="score-p">Vous avez <span id="correctAnsver-span"> </span> réponse(s) correctes, donc vous avez avez un
+            score de <span id="score-span"> </span> pts</p>
     </div>
 
     <p>La lettre choisie est : <span id="chosen-letter"></span> </p>

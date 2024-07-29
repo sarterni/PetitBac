@@ -150,8 +150,38 @@ function checkWord(event) {
     checkCountry(event);
     checkCity(event);
     checkJob(event);
-    checkDrink(event);
+    checkDrink(event)
+    countGreenInputs(event);
 }
+
+function countGreenInputs() {
+    const inputs = document.querySelectorAll('input[type="text"]');
+    let count = 0;
+    inputs.forEach(input => {
+        if (input.style.backgroundColor === 'green') {
+            count++;
+        }
+    });
+    document.getElementById('correctAnsver-span').textContent = count;
+    if (count === 1) {
+        document.getElementById('score-span').textContent = '2';
+    }
+    if (count === 2) {
+        document.getElementById('score-span').textContent = '4';
+    }
+    if (count === 3) {
+        document.getElementById('score-span').textContent = '6';
+    }
+    if (count === 4) {
+        document.getElementById('score-span').textContent = '8';
+
+    }
+    if (count === 5) {
+        document.getElementById('score-span').textContent = '10';
+    }
+
+}
+
 function checkCountry(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     // Get user input

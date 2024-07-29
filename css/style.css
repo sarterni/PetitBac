@@ -112,7 +112,8 @@ button#reset:disabled {
 }
 
 #chosen-letter,
-#score-span {
+#score-span,
+#correctAnsver-span {
     font-size: 2em;
     font-weight: bold;
 }
@@ -137,7 +138,8 @@ input[type="text"]:disabled {
     text-align: right;
 }
 
-#score-span {
+#score-span,
+#correctAnsver-span {
     color: #4CAF50;
 }
 
@@ -148,6 +150,7 @@ input[type="text"]:disabled {
 /* responsve */
 
 @media screen and (max-width: 768px) {
+
     .row1,
     .row2,
     .row3 {
@@ -155,5 +158,3 @@ input[type="text"]:disabled {
         gap: 20px;
     }
 }
-
-
