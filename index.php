@@ -139,6 +139,7 @@
         <button id="addWord">Ajouter un mot</button>
     </div>
     <script src="js/script.js?v=<?php echo filemtime('js/script.js'); ?>"></script>
+    <script src="js/checkCountry.js echo filemtime('js/checkCountry.js'); ?>"></script>
 
 </body>
 
